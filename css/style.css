@@ -1,0 +1,160 @@
+/***** Google fonts *****/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ccc;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu-open {
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    margin: 20px 30px;
+}
+
+.menu-close {
+    padding: 0;
+    font-size: 35px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#mobileMenu {
+    display: block;
+    border-left: 2px solid #FF5722;
+    width: 330px;
+    position: fixed;
+    top: 0;
+    right: -350px;
+    text-align: left;
+    padding: 0;
+    background-color: #fff;
+    z-index: 99999;
+    height: 100%;
+    transition: right 0.4s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#mobileMenu.open {
+    right: 0;
+}
+
+#mobileMenu > ul {
+    padding: 80px 0 0 20px;
+}
+
+#mobileMenu ul li h5 i,
+#mobileMenu ul li h5 svg {
+    float: right;
+    margin: 5px 20px 0 0;
+    font-size: 80%;
+}
+
+#mobileMenu ul li.open > h5 i.fa-plus,
+#mobileMenu ul li.open > h5 svg.fa-plus,
+#mobileMenu ul li h5 i.fa-minus,
+#mobileMenu ul li h5 svg.fa-minus {
+    display: none;
+}
+
+#mobileMenu ul li.open > h5 i.fa-minus,
+#mobileMenu ul li.open > h5 svg.fa-minus {
+    display: block;
+}
+
+#mobileMenu ul.level-first li {
+    position: relative;
+}
+
+#mobileMenu ul.level-first > li {
+    margin: 0 0 10px 0;
+}
+
+#mobileMenu ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    display: block;
+    cursor: pointer;
+}
+
+#mobileMenu ul li h5 {
+    font-size: 14px;
+    display: block;
+    margin: 0 0 10px 0;
+    color: #333;
+    cursor: pointer;
+}
+
+#mobileMenu ul.level-first > li > h5 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+#mobileMenu li ul.level-second {
+    margin: 20px 0 0 20px;
+    height: 0;
+    display: none;
+    transition: all .5s;
+}
+
+#mobileMenu li.open > ul.level-second {
+    margin: 20px 0 0 20px;
+    height: 100%;
+    display: block;
+}
+
+#mobileMenu ul.level-second > li {
+    margin-bottom: 5px;
+}
+
+#mobileMenu ul.level-second > li > h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+#mobileMenu li ul.level-third {
+    margin: 10px 0 0 20px;
+    height: 0;
+    display: none;
+    transition: all .5s;
+}
+
+#mobileMenu li.open > ul.level-third {
+    margin: 20px 0 0 20px;
+    height: 100%;
+    display: block;
+}
+
+#mobileMenu ul.level-third > li > h5 {
+    font-weight: 600;
+}
+
+#mobileMenu ul.link-list {
+    margin: -2px 0 10px 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 0 0 5px 5px;
+}
+
+#mobileMenu ul.link-list h5 {
+    cursor: default !important;
+}

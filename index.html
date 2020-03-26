@@ -1,0 +1,164 @@
+<!Doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Menu Style 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <link rel="icon" href="img/favicon.png" type="image/gif">
+    <!-- Place favicon.ico in the root directory -->
+    <script async src="plugins/fontawesome-free-5.7.2/js/all.js"></script>   <!-- currently v5.7.2 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+
+    <div class="menu-open">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div id="mobileMenu">
+        <div class="menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="level-first">
+            <li class="">
+                <h5>Western Big Game
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </h5>
+                <ul class="level-second">
+                    <li class="">
+                        <h5>Collections and Picks
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-minus"></i>
+                        </h5>
+                        <ul class="level-third">
+                            <li>
+                                <h5>Collections</h5>
+                                <ul class="link-list">
+                                    <li><a href="javascript:">Pack Essentials</a></li>
+                                    <li><a href="javascript:">Raingear </a></li>
+                                    <li><a href="javascript:">Backcountry Insulation</a></li>
+                                </ul>
+                                <h5>Staff Systems</h5>
+                                <ul class="link-list">
+                                    <li><a href="javascript:">M's Western Rifle</a></li>
+                                    <li><a href="javascript:">September Elk </a></li>
+                                    <li><a href="javascript:">Spring Bear </a></li>
+                                    <li><a href="javascript:">W's Western Rifle </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h5>Men's
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-minus"></i>
+                        </h5>
+                        <ul class="level-second">
+                            <li>
+                                <h5>Baselayer Tops and Bottoms</h5>
+                                <ul class="link-list">
+                                    <li><a href="javascript:">Pack Essentials</a></li>
+                                    <li><a href="javascript:">Raingear </a></li>
+                                    <li><a href="javascript:">Backcountry Insulation</a></li>
+                                </ul>
+                                <h5>Outerwear</h5>
+                                <ul class="link-list">
+                                    <li><a href="javascript:">Pack Essentials</a></li>
+                                    <li><a href="javascript:">Raingear </a></li>
+                                    <li><a href="javascript:">Backcountry Insulation</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><h5>Women's
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </h5>
+                        <ul class="level-second">
+                            <li>
+                                <h5>Baselayer Tops and Bottoms</h5>
+                                <ul class="link-list">
+                                    <li><a href="javascript:">Pack Essentials</a></li>
+                                    <li><a href="javascript:">Raingear </a></li>
+                                    <li><a href="javascript:">Backcountry Insulation</a></li>
+                                </ul>
+                                <h5>Logo Wear</h5>
+                                <ul class="link-list">
+                                    <li><a href="javascript:">Pack Essentials</a></li>
+                                    <li><a href="javascript:">Raingear </a></li>
+                                    <li><a href="javascript:">Backcountry Insulation</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h5>Whitetail
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </h5>
+                <ul class="level-second">
+                    <li>
+                        <h5>Collections</h5>
+                        <ul class="link-list">
+                            <li><a href="javascript:">Pack Essentials</a></li>
+                            <li><a href="javascript:">Raingear </a></li>
+                            <li><a href="javascript:">Backcountry Insulation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h5>Company
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </h5>
+                <ul class="level-second">
+                    <li>
+                        <h5>Staff Systems</h5>
+                        <ul class="link-list">
+                            <li><a href="javascript:">M's Western Rifle</a></li>
+                            <li><a href="javascript:">September Elk </a></li>
+                            <li><a href="javascript:">Spring Bear </a></li>
+                            <li><a href="javascript:">W's Western Rifle </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</header> <!--End of Header section-->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+    $('#mobileMenu li h5').on('click', function () {
+        $(this).parent().toggleClass('open');
+    });
+    // Menu open and close
+    $('.menu-open').on('click', function () {
+        $('#mobileMenu').addClass('open');
+
+    });
+    $('.menu-close').on('click', function () {
+        $('#mobileMenu').removeClass('open');
+    });
+
+    const $menu = $('#mobileMenu');
+    $(document).mouseup(e => {
+        if (!$menu.is(e.target)
+            && $menu.has(e.target).length === 0)
+        {
+            $menu.removeClass('open');
+        }
+    });
+
+</script>
+
+</body>
+</html>
